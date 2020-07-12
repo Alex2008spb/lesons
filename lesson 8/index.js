@@ -15,6 +15,15 @@ for ( let index = 0 ; index < numStr.length ; index += 1 )
 console.log(numArray);
 
 const tmp = numArray[0];
-numArray[0] = numArray[numArray.length - 1];
-numArray[numArray.length - 1] = tmp;
-console.log(numArray)
+const lastIndex = numArray.length - 1;
+numArray[0] = numArray[lastIndex];
+numArray[lastIndex] = tmp;
+console.log(numArray);
+
+let newStr = "" ;
+for ( let index = 0 ; index <= lastIndex; index += 1 )
+    newStr = newStr + numArray[index];
+console.log(newStr);
+
+const newNum = Number(newStr);
+console.log(newNum);
