@@ -8,9 +8,9 @@ console.log(`до смены ${num} после ${change} `);
 const numStr = num.toString(10);
 console.log(numStr);
 
-const numArray=[];
-for ( let index = 0 ; index < numStr.length ; index += 1 )
-    numArray.push(numStr [index]);
+const numArray=[...numStr];
+//for ( let index = 0 ; index < numStr.length ; index += 1 )
+//    numArray.push(numStr [index]);
 
 console.log(numArray);
 
@@ -20,9 +20,9 @@ numArray[0] = numArray[lastIndex];
 numArray[lastIndex] = tmp;
 console.log(numArray);
 
-let newStr = "" ;
-for ( let index = 0 ; index <= lastIndex; index += 1 )
-    newStr = newStr + numArray[index];
+let newStr = numArray.join("");
+//for ( let index = 0 ; index <= lastIndex; index += 1 )
+//    newStr += numArray[index];
 console.log(newStr);
 
 const newNum = Number(newStr);
