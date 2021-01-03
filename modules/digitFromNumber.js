@@ -5,7 +5,7 @@
  * @returns {number}
  * @example digit (379,0) -> 9
  */
-function digit(num, pos) {
+const digit = function(num, pos){
     const d = Math.pow(10, pos);
     const n1 = Math.floor(num / d);
     return n1 % 10;
